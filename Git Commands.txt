@@ -1,0 +1,54 @@
+git
+Four areas
+1.Localarea
+2.Staging Area
+3.Git Repositry Area
+4.Origin Area (github)
+1.create a repo in local
+
+2.git init-
+this command will create a git repositry area
+
+3.Add some files
+git add file name or 
+git add * will add all files in staging area
+this command will add files to staging area
+
+4.git commit -m "message for your commit"
+this command will add or move all the files in Git repositry area
+
+5.git status
+this command will give you details status about what files are in untracked,what are on staging area
+
+6.git log
+this command will give info about all the commits
+
+7.Create a new repositry with same name of local repositry
+git add remote origin "url"
+this command will create master Origin Repositry Area in git hub.
+8. git push origin master
+this command will push the changes from master of git repositry to master of Origin  Repositry area
+
+
+To create branch
+There are two ways to create branch
+a.git branch your branch name
+this command will create new branch in Git Repositry area but that will not code base of master branch
+
+git checkout your branch name
+this command will add code base in newly created branch or to change from one branch
+
+b.git branch -b your branch name
+this command will create a new branch with code base
+
+To delete a branch
+git branch -d your branch name whom you want to delete
+
+To merge 
+Now new branch is created.Do some changes.
+git add *
+git commit -m "messgae"
+
+git checkout master --switch to master
+git merge your branch name--this will merger branch to master in git Repositry area
+git push origin master-this command will now push master branch changes to master branch of Origin Area.
