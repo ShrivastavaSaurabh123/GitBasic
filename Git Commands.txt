@@ -42,8 +42,11 @@ b.git branch -b your branch name
 this command will create a new branch with code base
 
 To delete a branch
+move to master branch first
 git branch -d your branch name whom you want to delete
 
+To listout All branch in git repositry
+git branch
 To merge 
 Now new branch is created.Do some changes.
 git add *
