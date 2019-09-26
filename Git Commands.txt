@@ -23,8 +23,9 @@ this command will give you details status about what files are in untracked,what
 6.git log
 this command will give info about all the commits
 
-7.Create a new repositry with same name of local repositry
-git add remote origin "url"
+7.Open git hub in browser login
+Create a new repositry with same name of local repositry
+---git add remote origin "url"
 this command will create master Origin Repositry Area in git hub.
 8. git push origin master
 this command will push the changes from master of git repositry to master of Origin  Repositry area
@@ -42,7 +43,7 @@ b.git branch -b your branch name
 this command will create a new branch with code base
 
 To delete a branch
-move to master branch first
+Move to master branch first
 git branch -d your branch name whom you want to delete
 
 To listout All branch in git repositry
@@ -53,5 +54,5 @@ git add *
 git commit -m "messgae"
 
 git checkout master --switch to master
-git merge your branch name--this will merger branch to master in git Repositry area
+git merge your branch name--this will merge your  branch to master in git Repositry area
 git push origin master-this command will now push master branch changes to master branch of Origin Area.
