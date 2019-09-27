@@ -56,3 +56,8 @@ git commit -m "messgae"
 git checkout master --switch to master
 git merge your branch name--this will merge your  branch to master in git Repositry area
 git push origin master-this command will now push master branch changes to master branch of Origin Area.
+
+
+git reset
+this command will remove the files from staging area to local repositry
+i.e whatever files you have added by git add will be removed.
