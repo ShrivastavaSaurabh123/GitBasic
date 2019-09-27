@@ -1,0 +1,66 @@
+Terms for securing web services
+
+SSL – (Secure Sockets Layer) is the standard security technology for establishing an encrypted link between a web server and a browser. 
+This link ensures that all data passed between the web server and browsers remain private and integral
+
+Self signed certificate – is an identity certificate that is signed by the same entity whose identity it certifies
+
+Keystore and Truststore – is used to store SSL certificates in Java but there is subtle difference between them. 
+truststore is used to store public certificates while keystore is used to store private certificates of client or server
+SSL-
+Secure socket layer.
+data is transmitted in encrypted format.
+TLS- it is more advanced version of SSL.
+
+All these protocols takes place over HTTPS Procol
+
+
+When a browser send first time a request to server,
+Server gives a SSL certificate with public key used for encryption along with certain more details.
+Once browser recieves this certificate,it enables a secure layer with server i.e HTTPS.
+Whatever data is transmitted over internet happens in secure manner i.e in encrypted form.
+
+Encryption algorithm  used to encrypt the data is mentioned in certificate return by server.It can be RSA or SHA256
+
+Enable HTTPS protocol in Tomcat.
+a.Generate SSl certificate.
+Open cmd 
+
+type 
+keytool -genkeypair -alias Mycert(certificate name alias) -keyalg(key algorithm) RSA -keystore(location where your certificate will be present) D:\SSL Mycert.cert
+Press Enter
+Answer all the question
+
+--keytool -importkeystore -srckeystore F:\SSL\Mycert.cert -destkeystore F:\SSL\Mycert.cert -deststoretype pkcs12
+
+Now In Server.xml
+Uncomment Connector port="8443" 
+add these properties 
+keystoreFile="your Sssl certificate location"
+keystorePass="password" whatever you have given while creating certificate.
+
+In web.xml
+Need to add security constraint tag
+<security-constraint>
+<web-resource-collection>
+google the entry.
+ 
+ 
+Enable HTTPS In SpringBootApplication
+Command
+keytool -genkey -keyalg RSA -alias(alias name) selfsigned -keystore keystore.jks -storepass(your password) password -validity 360 -keysize 2048
+
+Warning:
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using 
+"keytool -importkeystore -srckeystore https-example.jks -destkeystore https-example.jks -deststoretype pkcs12".
+
+2. List out the details of the given keystore 
+keytool -v -list -keystore ${PATH_TO_KEYSTORE}/keystore.jks
+
+Add these configuration in application.properties
+server.port=8443
+server.ssl.key-alias=selfsigned
+server.ssl.key-password=password
+server.ssl.key-store=classpath:keystore.jks
+server.ssl.key-store-provider=SUN
+server.ssl.key-store-type=JKS
