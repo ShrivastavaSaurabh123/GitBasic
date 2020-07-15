@@ -33,28 +33,30 @@ this command will push the changes from master of git repositry to master of Ori
 
 To create branch
 There are two ways to create branch
-a.git branch your branch name
-this command will create new branch in Git Repositry area but that will not code base of master branch
-
-git checkout your branch name
-this command will add code base in newly created branch or to change from one branch
-
-b.git branch -b your branch name
-this command will create a new branch with code base
-
-To delete a branch
-Move to master branch first
-git branch -d your branch name whom you want to delete
-
-To listout All branch in git repositry
-git branch
+Move to master branch first-git checkput master
+a.git branch branch name-This command will create a empty branch means without copying the code base from master branch.
+git branch--it will list out all branch.it will show you are still on master.
+git checkout branch name-it will intialize the empty branch wih master branch and also switch the branch.
+  
 To merge 
 Now new branch is created.Do some changes.
 git add *
 git commit -m "messgae"
 
+Move to master branch first
 git checkout master --switch to master
-git merge your branch name--this will merge your  branch to master in git Repositry area
+git merge your branch name--this will merge your  branch to master.
+now once changes has been merged delete the branch
+To delete a branch
+Move to master branch first
+git branch -d your branch name whom you want to delete
+
+b.Another way to create a branch
+git checkout -b branch name
+ex-git checkout -b feature.
+
+
+
 git push origin master-this command will now push master branch changes to master branch of Origin Area.
 
 
