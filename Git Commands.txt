@@ -1,9 +1,9 @@
 git
 Four areas
-1.Localarea
+1.Working Copy
 2.Staging Area
-3.Git Repositry Area
-4.Origin Area (github)
+3.Local Repositry Area
+4.Central Repositry.
 1.create a repo in local
 
 2.git init-
